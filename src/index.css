@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-cobalt: #003366;
+  --color-amber: #FF9900;
+  
+  --color-background: #F3F4F6;
+  --color-foreground: #1A1A1A;
+  
+  --color-border: #E5E7EB;
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased text-sm;
+  }
+}
+
+/* High Density Specifics */
+.text-xxs {
+  font-size: 0.625rem; /* 10px */
+}
+
+.text-tiny {
+  font-size: 0.5625rem; /* 9px */
+}
+
+/* Custom Hide Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
