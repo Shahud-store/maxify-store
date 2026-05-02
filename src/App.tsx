@@ -3,7 +3,7 @@ import Header from './components/common/Header';
 import BottomNav from './components/common/BottomNav';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
-
+import AdminPage from './Admin';
 export default function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="/categories" element={<div className="p-20 text-center">Category Explorer - Logic Engine Ready</div>} />
             <Route path="/cart" element={<div className="p-20 text-center uppercase font-black text-cobalt text-4xl">Checkout Sequence Initiated</div>} />
             <Route path="/profile" element={<div className="p-20 text-center">User Identity Protocol Loaded</div>} />
